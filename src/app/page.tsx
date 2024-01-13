@@ -1,6 +1,7 @@
+import UserQuery from "@/components/UserQuery";
 import CodeSnippet from "@/components/code-snippet";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
 import { install_config } from "@/config/install";
@@ -29,18 +30,8 @@ export default function Home() {
             character level citations that allow us to fact check each statement
             in the context, minimizing halucinations.
           </p>
-          <div className="mx-auto max-w-xl border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 rounded-md p-4 mt-10">
-            <Input
-              className="block w-full sm:text-sm border-none focus-visible:ring-0"
-              placeholder="What's the purpose of Instructor?"
-            />
-            <div className="mt-3 grid grid-cols-3 gap-3">
-              <Button className="col-span-1 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
-                Generate Response
-              </Button>
-            </div>
-          </div>
         </div>
+        <UserQuery />
       </div>
     </div>
   );
